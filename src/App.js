@@ -1,15 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import Gear_Container from './Gear_Container';
 import 'semantic-ui-css/semantic.min.css'
 
-function App() {
+// import logo from './logo.svg';
+// import './App.css';
+import GearContainer from '../src/GearContainer'
+
+export default class App extends React.Component {
+  render() {
   return (
     <div className="App">
-      <Gear_Container/>
+      <GearContainer/>
     </div>
   );
 }
+}
 
-export default App;
+
