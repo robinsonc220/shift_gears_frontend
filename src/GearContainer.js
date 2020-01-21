@@ -17,7 +17,7 @@ componentDidMount() {
 }
  
 renderAllGear = () => { return this.state.allGear.map(gear => {
-    return  <div class="four wide column"> <Gear  total={this.state.total} gear={gear} addToCart={this.addToCart} renderCart={this.renderCart}/>  </div>
+    return  <div class="four wide column"> <Gear cart={this.state.cart} total={this.state.total} gear={gear} addToCart={this.addToCart} renderCart={this.renderCart}/>  </div>
         }) 
     }  
 

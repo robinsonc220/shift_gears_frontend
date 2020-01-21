@@ -50,7 +50,7 @@ export default class Cart extends Component {
     </Table>
     </center>
           <Modal.Actions>
-            <Button icon='dollar sign' content='Checkout' onClick={this.close} />
+        <Button icon='dollar sign' content='Checkout' onClick={<Checkout cart={this.props.cart} total={this.props.total}/>}/>
             <Button icon='shop' content='Keep Shopping' onClick={this.close} />
           </Modal.Actions>
     </Modal>

@@ -56,7 +56,7 @@ return (
               content="Add to Cart"
               onClick={console.log(this.props.gear)}>
             </Button> */}
-            <Cart total={this.props.total} gear={this.props.gear} addToCart={this.props.addToCart} renderCart={this.props.renderCart}/>
+            <Cart cart={this.props.cart} total={this.props.total} gear={this.props.gear} addToCart={this.props.addToCart} renderCart={this.props.renderCart}/>
           </Modal.Actions>
         </Modal>
 
