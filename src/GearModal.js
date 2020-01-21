@@ -3,10 +3,11 @@ import { Card, Icon, Image, Modal, Header } from 'semantic-ui-react'
 import Gear from '../src/Gear';
 
 export default class GearModal extends React.Component {
+  
   render() {
     console.log(this.props)
     return (
-      <Modal trigger={<Card></Card>}>
+    <Modal trigger={<Card></Card>}>
     <Modal.Header>Select a Photo</Modal.Header>
     <Modal.Content image>
       <Image wrapped size='medium' src='https://react.semantic-ui.com/images/avatar/large/rachel.png' />

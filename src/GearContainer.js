@@ -4,7 +4,8 @@ import Gear from '../src/Gear';
 export default class GearContainer extends React.Component{
     
 state = {
-    allGear: []
+    allGear: [],
+    cart: []
 }
 
 componentDidMount() {
@@ -14,10 +15,17 @@ componentDidMount() {
 }
  
 renderAllGear = () => { return this.state.allGear.map(gear => {
-    return  <div class="three wide column"> <Gear  gear={gear}/> </div>
+    return  <div class="four wide column"> <Gear  gear={gear} addToCart={this.addToCart}/>  </div>
         })
+       
     }  
-        
+addToCart = (gear) => {
+    let cartCopy = [...this.state.cart.push(gear)]
+    this.setState({
+    cart: cartCopy
+    }) 
+    console.log(this.state.cart)
+}
     
 render() {
 

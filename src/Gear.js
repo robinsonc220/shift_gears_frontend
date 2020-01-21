@@ -1,13 +1,15 @@
 import React from 'react';
 import { Card, Image, Button, Header, Modal } from 'semantic-ui-react'
-import styled from 'styled-components';
-import GearModal from '../src/GearModal'
+// import styled from 'styled-components';
+import Cart from '../src/Cart'
 
 
 
 export default class Gear extends React.Component {
 
-state = { open: false }
+state = { 
+    open: false
+ }
 
 show = (dimmer) => () => this.setState({ dimmer, open: true })
 close = () => this.setState({ open: false })
@@ -35,23 +37,30 @@ return (
             <Modal.Description>
               <Header>${this.props.gear.price}</Header>
               <p>
-              {this.props.gear.description}
+              Size: {this.props.gear.size}    
               </p>
+              <p>
+              {this.props.gear.description}  
+              </p>
+
             </Modal.Description>
           </Modal.Content>
           <Modal.Actions>
             <Button color='black' onClick={this.close}>
               Close
             </Button>
-            <Button
+            {/* <Button
               positive
               icon='checkmark'
               labelPosition='right'
               content="Add to Cart"
-              onClick={this.close}
-            />
+              onClick={console.log(this.props.gear)}>
+            </Button> */}
+            <Cart gear={this.props.gear}/>
           </Modal.Actions>
         </Modal>
+
+     
     
     
     
