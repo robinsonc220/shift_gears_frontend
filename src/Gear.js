@@ -19,7 +19,7 @@ close = () => this.setState({ open: false })
 render() {
 
 const { open, dimmer } = this.state
-
+// console.log(this.props)
 return (
     <div>
         <Card className="gear" onClick={this.show('blurring')}>
@@ -56,7 +56,7 @@ return (
               content="Add to Cart"
               onClick={console.log(this.props.gear)}>
             </Button> */}
-            <Cart gear={this.props.gear}/>
+            <Cart cart={this.props.cart} total={this.props.total} gear={this.props.gear} addToCart={this.props.addToCart} renderCart={this.props.renderCart}/>
           </Modal.Actions>
         </Modal>
 

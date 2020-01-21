@@ -3,16 +3,17 @@ import { Button, Icon, Modal, Table, Image, Header } from 'semantic-ui-react'
 
 export default class Cart extends Component {
     state = { 
-        open: false,
-        cart: []
+        open: false
      }
   
     open = () => this.setState({ open: true })
     close = () => this.setState({ open: false })
+
+    
   
     render() {
       const { open } = this.state
-  
+
       return (
         <Modal
           open={open}
@@ -25,38 +26,34 @@ export default class Cart extends Component {
               icon='checkmark'
               labelPosition='right'
               content="Add to Cart"
-              >
+              onClick={() => this.props.addToCart(this.props.gear) }>
+
             </Button>
           }
         >
-          <Modal.Header>Your Cart</Modal.Header>
-          <Table basic='very' celled collapsing>
-    <Table.Header>
-      <Table.Row>
-        {/* <Table.HeaderCell>Items</Table.HeaderCell>
-        <Table.HeaderCell>Prices</Table.HeaderCell> */}
-      </Table.Row>
-    </Table.Header>
-
-    <Table.Body>
-      <Table.Row>
+    <Modal.Header>Your Cart</Modal.Header>
+    <center>
+    <Table basic='very' celled collapsing>
+        <Table.Body>
+        {this.props.renderCart()}
+        <Table.Row>
         <Table.Cell>
-          <Header as='h4' image>
-            <Image src={this.props.gear.img_url} />
+          <Header as='h4'>
             <Header.Content>
-            {this.props.gear.name}
-              <Header.Subheader>Sz. {this.props.gear.size}</Header.Subheader>
+                Total
             </Header.Content>
           </Header>
         </Table.Cell>
-        <Table.Cell>${this.props.gear.price}</Table.Cell>
+        <Table.Cell>${this.props.total}</Table.Cell>
       </Table.Row>
-    </Table.Body>
-  </Table>
+        </Table.Body>
+    </Table>
+    </center>
           <Modal.Actions>
-            <Button icon='check' content='Checkout' onClick={this.close} />
+        <Button icon='dollar sign' content='Checkout' onClick={<Checkout cart={this.props.cart} total={this.props.total}/>}/>
+            <Button icon='shop' content='Keep Shopping' onClick={this.close} />
           </Modal.Actions>
-        </Modal>
+    </Modal>
       )
     }
   }
