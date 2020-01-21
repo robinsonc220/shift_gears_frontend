@@ -1,4 +1,5 @@
 import React from 'react';
+
 import Gear from '../src/Gear';
 import { Button, Icon, Modal, Table, Image, Header } from 'semantic-ui-react'
 
@@ -56,6 +57,6 @@ render() {
         </div>
         );
      }
-}
+  }
 
 
