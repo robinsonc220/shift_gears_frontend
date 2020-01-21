@@ -1,14 +1,14 @@
 import React from 'react';
-import All_Gear from './All_Gear'
+import AllGear from './AllGear'
 
-export default class Gear_Container extends React.Component{
+export default class GearContainer extends React.Component{
     render() {
 fetch('')
 
         return (
            <div>
                "Gear Container"
-              <All_Gear/>
+              <AllGear/>
               
            </div>
         );

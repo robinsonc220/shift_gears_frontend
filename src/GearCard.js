@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, Icon, Image } from 'semantic-ui-react'
 
-const Gear_Card = () => (
+const GearCard = () => (
   <Card>
     <Image src='/images/avatar/large/matthew.png' wrapped ui={false} />
     <Card.Content>
@@ -14,7 +14,7 @@ const Gear_Card = () => (
       </Card.Description>
     </Card.Content>
     <Card.Content extra>
-      <a>
+      <a href >
         <Icon name='user' />
         22 Friends
       </a>
@@ -22,6 +22,6 @@ const Gear_Card = () => (
   </Card>
 )
 
-export default Gear_Card
+export default GearCard
 
 

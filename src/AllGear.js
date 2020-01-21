@@ -1,12 +1,12 @@
 import React from 'react';
-import Gear_Card from './Gear_Card';
+import GearCard from './GearCard';
 
-export default class All_Gear extends React.Component{
+export default class AllGear extends React.Component{
     render() {
         return (
            <div>
                "All_Gear"
-               <Gear_Card/>
+               <GearCard/>
               
            </div>
         );
